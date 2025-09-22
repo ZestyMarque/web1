@@ -82,3 +82,12 @@ footer {
   background: #111;
   margin-top: 1rem;
 }
+
+.product img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
