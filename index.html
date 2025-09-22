@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Магазин</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Energy Drinks Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Добро пожаловать в мой магазин!</h1>
-    <script src="js/script.js"></script>
+  <header>
+    <h1>Energy Drinks Shop</h1>
+    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <main>
+    <section class="products">
+      <article class="product">
+        <h2>Burn</h2>
+        <p>Цена: 120 ₽</p>
+        <button onclick="addToCart('Burn', 120)">Добавить в корзину</button>
+      </article>
+
+      <article class="product">
+        <h2>Adrenaline</h2>
+        <p>Цена: 130 ₽</p>
+        <button onclick="addToCart('Adrenaline', 130)">Добавить в корзину</button>
+      </article>
+
+      <article class="product">
+        <h2>RedBull</h2>
+        <p>Цена: 150 ₽</p>
+        <button onclick="addToCart('RedBull', 150)">Добавить в корзину</button>
+      </article>
+
+      <article class="product">
+        <h2>Monster</h2>
+        <p>Цена: 140 ₽</p>
+        <button onclick="addToCart('Monster', 140)">Добавить в корзину</button>
+      </article>
+    </section>
+
+    <section class="cart">
+      <h2>Корзина</h2>
+      <ul id="cart-list"></ul>
+      <p id="total">Итого: 0 ₽</p>
+      <button onclick="showOrderForm()">Оформить заказ</button>
+    </section>
+
+    <section class="order-form" id="order-form">
+      <h2>Форма заказа</h2>
+      <form onsubmit="submitOrder(event)">
+        <input type="text" placeholder="Имя" required>
+        <input type="text" placeholder="Фамилия" required>
+        <input type="text" placeholder="Адрес" required>
+        <input type="tel" placeholder="Телефон" required>
+        <button type="submit">Создать заказ</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Energy Drinks Shop</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
