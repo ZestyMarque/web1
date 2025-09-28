@@ -1,93 +1,112 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0;
 }
+
 
 header {
-  background: linear-gradient(90deg, #6a0dad, #ff007f, #ff2400);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h1 {
-  margin: 0;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.product {
-  background: #2a2a2a;
-  padding: 1rem;
-  border-radius: 10px;
+  background-color: #222;
+  padding: 20px;
   text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  color: #ff66cc;
+}
+
+
+#cartBtn {
+  background-color: #8a2be2;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+#cartBtn:hover {
+  background-color: #ff3366; 
+}
+
+/* Секция с товарами */
+#products {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+/* Карточки товаров */
+.product {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(255, 0, 100, 0.3);
+}
+
+.product img {
+  width: 180px;
+  margin-bottom: 10px;
 }
 
 .product button {
-  background: #6a0dad;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #ff3366;
   color: white;
-  transition: 0.3s;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .product button:hover {
-  background: #ff007f;
+  background-color: #ff6699;
 }
 
-.cart, .order-form {
-  background: #2a2a2a;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
+/* Корзина и форма по центру */
+main {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 500px;
 }
 
-#order-form {
-  display: none;
-}
-
-form input, form button {
-  display: block;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
+/* Поля формы */
+form input {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #222;
+  color: white;
 }
 
 form button {
-  background: #ff2400;
+  background-color: #8a2be2;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 form button:hover {
-  background: #ff007f;
+  background-color: #ff3366;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #111;
-  margin-top: 1rem;
+/* Сообщение об ошибке или успехе */
+#orderMessage {
+  margin-top: 15px;
+  font-size: 16px;
 }
-
-.product img {
-  max-width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-

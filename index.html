@@ -2,68 +2,49 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Energy Drinks Shop</title>
+  <title>Магазин энергетиков</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Energy Drinks Shop</h1>
-    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+    <h1>Магазин энергетиков</h1>
+    <div style="text-align: right; margin-top: -40px; margin-right: 20px;">
+      <a href="cart.html" id="cartBtn" style="background: purple; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+        🛒 Корзина (<span id="cartCount">0</span>)
+      </a>
+    </div>
   </header>
 
-  <main>
-    <section class="products">
-      <article class="product">
-	<img src="images/burn.png" alt="Burn">
-        <h2>Burn</h2>
-        <p>Цена: 100 ₽</p>
-        <button onclick="addToCart('Burn', 120)">Добавить в корзину</button>
-      </article>
+  <h2 style="text-align:center;">Наши товары</h2>
+  <div id="products" style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+    <div class="product" style="text-align:center;">
+      <img src="images/burn.png" alt="Burn" width="180">
+      <p><b>Burn</b></p>
+      <p>Цена: 100 ₽</p>
+      <button onclick="addToCart('Burn', 100)">Добавить</button>
+    </div>
 
-      <article class="product">
-	<img src="images/adrenaline.png" alt="Adrenaline">
-        <h2>Adrenaline</h2>
-        <p>Цена: 120 ₽</p>
-        <button onclick="addToCart('Adrenaline', 130)">Добавить в корзину</button>
-      </article>
+    <div class="product" style="text-align:center;">
+      <img src="images/adrenaline.png" alt="Adrenaline" width="180">
+      <p><b>Adrenaline</b></p>
+      <p>Цена: 120 ₽</p>
+      <button onclick="addToCart('Adrenaline', 120)">Добавить</button>
+    </div>
 
-      <article class="product">
-	<img src="images/redbull.png" alt="RedBull">
-        <h2>RedBull</h2>
-        <p>Цена: 200 ₽</p>
-        <button onclick="addToCart('RedBull', 150)">Добавить в корзину</button>
-      </article>
+    <div class="product" style="text-align:center;">
+      <img src="images/redbull.png" alt="RedBull" width="180">
+      <p><b>RedBull</b></p>
+      <p>Цена: 200 ₽</p>
+      <button onclick="addToCart('RedBull', 200)">Добавить</button>
+    </div>
 
-      <article class="product">
-	<img src="images/monster.png" alt="Monster">
-        <h2>Monster</h2>
-        <p>Цена: 240 ₽</p>
-        <button onclick="addToCart('Monster', 140)">Добавить в корзину</button>
-      </article>
-    </section>
-
-    <section class="cart">
-      <h2>Корзина</h2>
-      <ul id="cart-list"></ul>
-      <p id="total">Итого: 0 ₽</p>
-      <button onclick="showOrderForm()">Оформить заказ</button>
-    </section>
-
-    <section class="order-form" id="order-form">
-      <h2>Форма заказа</h2>
-      <form onsubmit="submitOrder(event)">
-        <input type="text" placeholder="Имя" required>
-        <input type="text" placeholder="Фамилия" required>
-        <input type="text" placeholder="Адрес" required>
-        <input type="tel" placeholder="Телефон" required>
-        <button type="submit">Создать заказ</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Energy Drinks Shop</p>
-  </footer>
+    <div class="product" style="text-align:center;">
+      <img src="images/monster.png" alt="Monster" width="180">
+      <p><b>Monster</b></p>
+      <p>Цена: 240 ₽</p>
+      <button onclick="addToCart('Monster', 240)">Добавить</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
