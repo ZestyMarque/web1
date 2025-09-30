@@ -114,6 +114,7 @@ function createOrder() {
   message.textContent = "";
 
   if (cart.length === 0) {
+    message.style.color = "red";
     message.textContent = "Корзина пуста!";
     return;
   }
@@ -124,20 +125,22 @@ function createOrder() {
   let address = document.getElementById("address").value.trim();
 
   if (!validatePhone(phone)) {
+    message.style.color = "red";
     message.textContent = "Некорректный номер телефона!";
     return;
   }
 
   if (name === "" || surname === "" || phone === "" || address === "") {
+    message.style.color = "red";
     message.textContent = "Заполните все поля!";
     return;
   }
 
-  // очистка корзины
+  // очищаем корзину
   cart = [];
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  // очистка формы
+  // очищаем форму
   document.getElementById("orderForm").reset();
   localStorage.removeItem("formData");
 
@@ -147,6 +150,7 @@ function createOrder() {
   message.style.color = "green";
   message.textContent = "Заказ создан!";
 }
+
 
 
 
